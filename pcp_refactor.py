@@ -245,30 +245,7 @@ def main():
     practice_list = remove_list_duplicates(practice_list)
     practice_list.sort()
     print(len(practice_dict))
-    ''' ### Check Similarity Code###
-    for item in practice_list:
-        for second_item in practice_list:
-            similarity_val = fuzz.ratio(item, second_item)
-            is_similar = (similarity_val > 89)
-            if is_similar:
-                item_to_update = practice_dict['{}'.format(item)]
-                second_item_to_update = practice_dict['{}'.format(second_item)]
-                item_to_update.add(second_item)
-                second_item_to_update.add(item)                
-    # pprint.pprint(practice_dict)         
 
-    similar_items = {}
-    for item in practice_dict:        
-        if (len(practice_dict['{}'.format(item)]) > 1):
-            similar_items['{}'.format(item)] = practice_dict['{}'.format(item)]
-
-    for item in similar_items.keys():        
-        this_set = similar_items['{}'.format(item)]        
-        merged_set = set()
-        merge_sets_until_equal(this_set, merged_set, similar_items)
-
-    # pprint.pprint(similar_items)
-    '''
 
     html_list = initialize_html_list()
 
